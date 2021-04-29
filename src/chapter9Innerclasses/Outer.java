@@ -14,7 +14,7 @@ public class Outer {
         return new Inner();
     }
     public static void main(String[] args) {
-        Outer5 o = new Outer5();
+        Outer o = new Outer();
         Inner i = o.makeInner();
     }
 }
