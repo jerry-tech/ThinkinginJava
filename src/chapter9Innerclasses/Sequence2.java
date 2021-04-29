@@ -24,23 +24,23 @@ public class Sequence2 {
         if(next < items.length)
             items[next++] = x;
     }
-    private class SequenceSelector implements Selector {
+    private class SequenceSelector implements Selector4 {
         private int i = 0;
         public boolean end() { return i == items.length; }
         public Object current() { return items[i]; }
         public void next() { if(i < items.length) i++; }
     }
-    public Selector selector() {
+    public Selector4 selector() {
         return new SequenceSelector();
     }
     public static void main(String[] args) {
         Sequence2 sequence = new Sequence2(10);
         for(int i = 0; i < 10; i++)
             sequence.add(new Word(Integer.toString(i)));
-        Selector selector = sequence.selector();
-        while(!selector.end()) {
-            System.out.print(selector.current() + " ");
-            selector.next();
+        Selector4 selector4 = sequence.selector();
+        while(!selector4.end()) {
+            System.out.print(selector4.current() + " ");
+            selector4.next();
         }
         Word w1 = new Word("Peace");
         Word w2 = new Word("Love");
@@ -49,7 +49,7 @@ public class Sequence2 {
         message.add(w1);
         message.add(w2);
         message.add(w3);
-        Selector sel = message.selector();
+        Selector4 sel = message.selector();
         while(!sel.end()) {
             System.out.print(sel.current() + " ");
             sel.next();

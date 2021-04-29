@@ -1,6 +1,5 @@
 package chapter8interfaces;
 
-import jdk.swing.interop.SwingInterOpUtils;
 
 interface Rodent1{
     String name = "Rodent";
