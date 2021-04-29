@@ -1,5 +1,6 @@
 package chapter18Annotations;
 
+//Exercise 2: (3) Add support for division to the interface extractor.
 
 @ExtractInterface("IDivider")
 public class Divider {
